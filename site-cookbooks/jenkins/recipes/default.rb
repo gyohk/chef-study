@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 apt_repository "jenkins" do
-  url "http://pkg.jenkins-ci.org/debian binary/"
+  uri "http://pkg.jenkins-ci.org/debian binary/"
   key "http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key"
   retries 10
   retry_delay 10
