@@ -1,0 +1,4 @@
+app/Plugin
+app/Vendor
+app/Reports
+app/Config/bootstrap/environments/production.php
