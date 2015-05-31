@@ -1,0 +1,87 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "SPEC4PHP" "1" "August 2011" "Ivan -DrSlump- Montes" "Spec for PHP 0.9.3"
+.
+.SH "NAME"
+\fBspec4php\fR \- cli runner
+.
+.SH "SYNOPSIS"
+.
+.nf
+
+spec4php <FILE>
+spec4php <DIRECTORY>
+.
+.fi
+.
+.SH "DESCRIPTION"
+\fBSpec4php\fR runs the specified spec files and reports the results in the terminal\. For information on how to create spec files please refer to spec4php(5)\.
+.
+.SH "SPEC FILES"
+The \fBspec4php\fR command expects input files to contain PHP code with \fBdescribe\fR and \fBit\fR blocks in it\.
+.
+.P
+Giving a directory as argument, \fBspec4php\fR will run all the files ending with \fB\.spec\.php\fR or \fBSpec\.php\fR it finds below that directory\.
+.
+.SH "OPTIONS"
+The following options (switches) are supported\.
+.
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+Prints the usage help message and quits\.
+.
+.TP
+\fB\-v\fR, \fB\-\-verbose\fR
+Enables verbose mode\. Additional information will be printed\.
+.
+.TP
+\fB\-\-debug\fR
+Enables debug mode\. Stack traces will be shown unfiltered\.
+.
+.TP
+\fB\-\-color\fR=[\fIauto\fR|\fIyes\fR|\fIno\fR]
+Tells Spec if it should use colors when printing messages\. By default (if the option is not set) it will use the \fIauto\fR mode, which will try to detect if it\'s safe to use ansi color sequences\.
+.
+.TP
+\fB\-f\fR \fIregexp\fR, \fB\-\-filter\fR=\fIregexp\fR
+Runs only the tests matching the given regular expression\. You can specify this option multiple times to build complex expressions\.
+.
+.TP
+\fB\-g\fR \fIgroup\fR, \fB\-\-group\fR=\fIgroup\fR
+Runs only the tests assigned to the given group or groups\. Use commas to define multiple groups or specify this option multiple times\.
+.
+.TP
+\fB\-\-exclude\-group\fR=\fIgroup\fR
+Do not run the tests assigned to the given group or groups\. Use commas to define multiple groups or specify this option multiple times\.
+.
+.TP
+\fB\-\-list\-group\fR=\fIgroup\fR
+Print a list of the available group names\.
+.
+.TP
+\fB\-\-format\fR=\fIformat\fR
+The formatter to use to present the result of the tests\. The default formatter is \fIdots\fR, the other supported formatter is \fIstory\fR\.
+.
+.TP
+\fB\-s\fR
+An alias for \fB\-\-format story\fR
+.
+.TP
+\fB\-b\fR, \fB\-\-beep\fR
+Turn on beep\-on\-failures, which will issue a beep sound for each failed test\.
+.
+.TP
+\fB\-d\fR \fIfile\fR, \fB\-\-dump\fR \fIfile\fR
+Outputs the generated PHP code for a Spec file\. If verbose mode is enabled it will print line numbers too\.
+.
+.SH "EXAMPLES"
+.
+.SH "BUGS"
+Please report bugs via GitHub\'s issue tracker \fIhttp://github\.com/drslump/spec\-php/issues\fR
+.
+.SH "COPYRIGHT"
+Spec for PHP is Copyright (C) 2011 Ivan \-DrSlump\- Montes \fIhttp://pollinimini\.net\fR
+.
+.SH "SEE ALSO"
+spec4php(3), spec4php(5), \fIhttp://github\.com/drslump/spec\-php\fR
