@@ -11,8 +11,6 @@ default:
       # 
       # switch disable followings if use behat/mink-selenium2-driver 
       #
-      selenium: ~
-      javascript_session: selenium
       # 
       # switch enable followings if use behat/mink-selenium2-driver 
       #
